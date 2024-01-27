@@ -145,7 +145,7 @@ function DiscordLib:Window(text)
 	Title.Size = UDim2.new(0, 192, 0, 23)
 	Title.Font = Enum.Font.Gotham
 	Title.Text = text
-	Title.TextColor3 = Color3.fromRGB(99, 102, 109)
+	Title.TextColor3 = Color3.fromRGB(255,255,255)
 	Title.TextSize = 13.000
 	Title.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -2331,7 +2331,7 @@ function DiscordLib:Window(text)
 				SliderTitle.Size = UDim2.new(0, 200, 0, 27)
 				SliderTitle.Font = Enum.Font.Gotham
 				SliderTitle.Text = text
-				SliderTitle.TextColor3 = Color3.fromRGB(127, 131, 137)
+				SliderTitle.TextColor3 = Color3.fromRGB(255,255,255)
 				SliderTitle.TextSize = 14.000
 				SliderTitle.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -2523,7 +2523,7 @@ function DiscordLib:Window(text)
 				DropdownTitle.Size = UDim2.new(0, 200, 0, 29)
 				DropdownTitle.Font = Enum.Font.Gotham
 				DropdownTitle.Text = text
-				DropdownTitle.TextColor3 = Color3.fromRGB(127, 131, 137)
+				DropdownTitle.TextColor3 = Color3.fromRGB(255,255,255)
 				DropdownTitle.TextSize = 14.000
 				DropdownTitle.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -2787,7 +2787,7 @@ function DiscordLib:Window(text)
 					ItemText.Position = UDim2.new(0.0211081803, 0, 0, 0)
 					ItemText.Size = UDim2.new(0, 192, 0, 29)
 					ItemText.Font = Enum.Font.Gotham
-					ItemText.TextColor3 = Color3.fromRGB(212, 212, 212)
+					ItemText.TextColor3 = Color3.fromRGB(255,255,255)
 					ItemText.TextSize = 14.000
 					ItemText.TextXAlignment = Enum.TextXAlignment.Left
 					ItemText.Text = textadd
@@ -2862,7 +2862,7 @@ function DiscordLib:Window(text)
 				ColorpickerTitle.Size = UDim2.new(0, 200, 0, 29)
 				ColorpickerTitle.Font = Enum.Font.Gotham
 				ColorpickerTitle.Text = "Colorpicker"
-				ColorpickerTitle.TextColor3 = Color3.fromRGB(127, 131, 137)
+				ColorpickerTitle.TextColor3 = Color3.fromRGB(255,255,255)
 				ColorpickerTitle.TextSize = 14.000
 				ColorpickerTitle.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -3077,7 +3077,7 @@ function DiscordLib:Window(text)
 				TextboxTitle.Size = UDim2.new(0, 200, 0, 29)
 				TextboxTitle.Font = Enum.Font.Gotham
 				TextboxTitle.Text = text
-				TextboxTitle.TextColor3 = Color3.fromRGB(127, 131, 137)
+				TextboxTitle.TextColor3 = Color3.fromRGB(255,255,255)
 				TextboxTitle.TextSize = 14.000
 				TextboxTitle.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -3168,7 +3168,7 @@ function DiscordLib:Window(text)
 				LabelTitle.Size = UDim2.new(0, 200, 0, 30)
 				LabelTitle.Font = Enum.Font.Gotham
 				LabelTitle.Text = text
-				LabelTitle.TextColor3 = Color3.fromRGB(127, 131, 137)
+				LabelTitle.TextColor3 = Color3.fromRGB(255,255,255)
 				LabelTitle.TextSize = 14.000
 				LabelTitle.TextXAlignment = Enum.TextXAlignment.Left
 				
@@ -3201,7 +3201,7 @@ function DiscordLib:Window(text)
 				KeybindTitle.Size = UDim2.new(0, 200, 0, 30)
 				KeybindTitle.Font = Enum.Font.Gotham
 				KeybindTitle.Text = text
-				KeybindTitle.TextColor3 = Color3.fromRGB(127, 131, 137)
+				KeybindTitle.TextColor3 = Color3.fromRGB(255,255,255)
 				KeybindTitle.TextSize = 14.000
 				KeybindTitle.TextXAlignment = Enum.TextXAlignment.Left
 
