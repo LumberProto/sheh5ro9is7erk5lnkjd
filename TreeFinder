@@ -1,20 +1,5 @@
-
-function tableToString(tbl)
-    local result = "{"
-    for key, value in pairs(tbl) do
-        if type(value) == "string" then
-            result = result .. key .. '="' .. value .. '",'
-        elseif type(value) == "boolean" or type(value) == "number" then
-            result = result .. key .. '=' .. tostring(value) .. ','
-        end
-    end
-    result = result:sub(1, -2) .. "}"
-    return result
-end
-
-local configTable = getgenv().Config
-local configString = 'getgenv().Config = ' .. tableToString(configTable)
-local fullScript = configString .. [[
+local string = 'getgenv().Config = '
+local fullScript = string.."'"..getgenv().Config.."'".. [[
     repeat
         task.wait()
     until game:IsLoaded()
@@ -26,15 +11,14 @@ queue_on_teleport(fullScript)
 
 
 local Tree
-local treesToFind = getgenv().Config.TreesToFind
-local treesString = table.concat(treesToFind, ", ")
+local treesToFind = getgenv().Config
 local module = loadstring(game:HttpGet"https://raw.githubusercontent.com/LeoKholYt/roblox/main/lk_serverhop.lua")()
 
 for i, v in pairs(workspace:GetChildren()) do
     if v.Name == "TreeRegion" then
         for k, l in pairs(v:GetChildren()) do
             if l:FindFirstChild("TreeClass") and l:FindFirstChild("WoodSection") and l:FindFirstChild("Owner") then
-                if (l.TreeClass.Value == treesString) and l.Owner.Value == nil then
+                if (l.TreeClass.Value == treesToFind) and l.Owner.Value == nil then
                     Tree = l
                 end
             end
@@ -43,7 +27,7 @@ for i, v in pairs(workspace:GetChildren()) do
 end
 
 if Tree == nil then
-    game.ReplicatedStorage.Notices.SendUserNotice:Fire(string.format('No %s Wood Found!', treesString))
+    game.ReplicatedStorage.Notices.SendUserNotice:Fire(string.format('No %s Wood Found!', treesToFind))
     wait(2)
     return
     module:Teleport(game.PlaceId)
@@ -52,5 +36,5 @@ end
 if Tree ~= nil then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Tree["WoodSection"].CFrame
 
-game.ReplicatedStorage.Notices.SendUserNotice:Fire(string.format("Claimed  %s Tree, Load Your Base To Cut The Tree", treesString))
+game.ReplicatedStorage.Notices.SendUserNotice:Fire(string.format("Claimed  %s Tree, Load Your Base To Cut The Tree", treesToFind))
 end
