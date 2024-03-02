@@ -5,6 +5,9 @@ queue_on_teleport([[
 	loadstring(game:HttpGet"https://raw.githubusercontent.com/LumberProto/sheh5ro9is7erk5lnkjd/main/TreeFinder")()
 ]])
 
+	repeat
+	task.wait()
+	until game:IsLoaded()
 local Tree
 local treesToFind = getgenv().Config.TreesToFind
 local treesString = table.concat(treesToFind, ", ")
