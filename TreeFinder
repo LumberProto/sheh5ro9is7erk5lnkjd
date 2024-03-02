@@ -6,6 +6,7 @@ queue_on_teleport([[
 ]])
 
 local Tree
+local treesToFind = getgenv().Config.TreesToFind
 local treesString = table.concat(treesToFind, ", ")
 local module = loadstring(game:HttpGet"https://raw.githubusercontent.com/LeoKholYt/roblox/main/lk_serverhop.lua")()
 
