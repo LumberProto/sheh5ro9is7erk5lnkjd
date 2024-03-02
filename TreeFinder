@@ -1,13 +1,30 @@
-queue_on_teleport([[
-	repeat
-	task.wait()
-	until game:IsLoaded()
-	loadstring(game:HttpGet"https://raw.githubusercontent.com/LumberProto/sheh5ro9is7erk5lnkjd/main/TreeFinder")()
-]])
 
-	repeat
-	task.wait()
-	until game:IsLoaded()
+function tableToString(tbl)
+    local result = "{"
+    for key, value in pairs(tbl) do
+        if type(value) == "string" then
+            result = result .. key .. '="' .. value .. '",'
+        elseif type(value) == "boolean" or type(value) == "number" then
+            result = result .. key .. '=' .. tostring(value) .. ','
+        end
+    end
+    result = result:sub(1, -2) .. "}"
+    return result
+end
+
+local configTable = getgenv().Config
+local configString = 'getgenv().Config = ' .. tableToString(configTable)
+local fullScript = configString .. [[
+    repeat
+        task.wait()
+    until game:IsLoaded()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/LumberProto/sheh5ro9is7erk5lnkjd/main/TreeFinder"))()
+]]
+
+
+queue_on_teleport(fullScript)
+
+
 local Tree
 local treesToFind = getgenv().Config.TreesToFind
 local treesString = table.concat(treesToFind, ", ")
